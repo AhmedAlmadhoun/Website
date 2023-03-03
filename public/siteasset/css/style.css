@@ -1,37 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
-
-
-*{
+* {
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: 'Cairo', sans-serif;
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     margin: 0;
 }
 
+
 /* HOME STYLE START */
-.container{
+
+.container {
     display: flex;
     flex-direction: column;
     width: 100%;
     min-width: 1000px;
 }
 
-.sticky-container{
+.sticky-container {
     position: relative;
 }
 
-.sticky{
+.sticky {
     position: sticky;
     top: 0;
 }
 
-.header{
+.header {
     width: 100%;
     height: 40px;
     background-color: #4016da;
@@ -41,45 +41,48 @@ body{
     color: white;
 }
 
-.social-media-links{
+.social-media-links {
     color: white;
     display: flex;
     width: 70px;
     justify-content: space-evenly;
 }
-.facebook .youtube{
+
+.facebook .youtube {
     color: white;
 }
-.facebook:hover, .youtube:hover{
+
+.facebook:hover,
+.youtube:hover {
     cursor: pointer;
 }
 
-.link{
+.link {
     cursor: pointer;
     text-decoration: none;
     color: black;
 }
 
-.email{
+.email {
     display: flex;
 }
 
-.email-text{
+.email-text {
     margin: 0 5px;
 }
 
-.phone-number{
+.phone-number {
     display: flex;
-    font-family: 'Muli',sans-serif;
+    font-family: 'Muli', sans-serif;
     align-items: center;
 }
 
-.text-margin{
+.text-margin {
     margin: 0 15px;
-    font-family: 'Cairo',sans-serif;
+    font-family: 'Cairo', sans-serif;
 }
 
-.nav-bar{
+.nav-bar {
     color: black;
     display: flex;
     justify-content: space-around;
@@ -92,27 +95,27 @@ body{
     font-family: 'Cairo', sans-serif;
 }
 
-.active{
+.active {
     font-weight: 900;
 }
 
-button{
+button {
     background-color: #4016da;
-    font-family: 'Cairo',sans-serif;
+    font-family: 'Cairo', sans-serif;
     padding: 5px 15px;
     color: white;
     border: solid 1px white;
     cursor: pointer;
 }
 
-.slideshow-section{
+.slideshow-section {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
 }
 
-.news-section{
+.news-section {
     width: 95%;
     height: 290px;
     display: flex;
@@ -120,14 +123,14 @@ button{
     align-items: center;
 }
 
-.btn{
+.btn {
     background-color: #4016da;
     color: white;
     padding: 12px;
     cursor: pointer;
 }
 
-.top-news-picture{
+.top-news-picture {
     width: 30%;
     height: 100%;
     background-image: url(home/medical-student.jpg);
@@ -136,7 +139,7 @@ button{
     background-position: center center;
 }
 
-.news-context{
+.news-context {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -145,38 +148,38 @@ button{
     color: #4016da;
 }
 
-.show-more{
+.show-more {
     background-color: #4016da;
     color: white;
     padding: 2px 10px;
 }
 
-.how-do-we-work-text{
+.how-do-we-work-text {
     margin-top: 80px;
 }
 
-.how-do-we-work-text, .our-newest-courses-text{
+.how-do-we-work-text,
+.our-newest-courses-text {
     font-size: 22px;
     text-align: center;
     padding: 50px;
     color: #4016da;
 }
 
-.how-do-we-work{
+.how-do-we-work {
     background: linear-gradient(to bottom, white, #ede8ff);
     height: 500px;
     width: 100%;
-    
 }
 
-.how-do-we-work-sections{
+.how-do-we-work-sections {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     padding: 100px 0;
 }
 
-.method{
+.method {
     width: 20%;
     height: 180px;
     background-color: #fff;
@@ -189,17 +192,17 @@ button{
     color: #4016da;
 }
 
-.method-text{
+.method-text {
     font-size: 24px;
 }
 
-.newest-courses{
-    background: linear-gradient(to bottom, #ede8ff ,white );
+.newest-courses {
+    background: linear-gradient(to bottom, #ede8ff, white);
     padding: 20px;
     padding-bottom: 80px;
 }
 
-.the-new-courses{
+.the-new-courses {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -207,7 +210,7 @@ button{
     width: 100%;
 }
 
-.course-box{
+.course-box {
     width: 20%;
     display: flex;
     flex-direction: column;
@@ -217,52 +220,52 @@ button{
     border-radius: 10px;
 }
 
-.web-design{
+.web-design {
     background-image: url(home/Web-Design-Course.png);
     background-position: center center;
     background-size: cover;
     object-fit: cover;
 }
 
-.flutter-course{
+.flutter-course {
     background-image: url(home/Flutter-Course.jpg);
     background-position: center center;
     background-size: cover;
     object-fit: cover;
 }
 
-.english-course{
+.english-course {
     background-image: url(home/English-Course.png);
     background-position: center center;
     background-size: cover;
     object-fit: cover;
 }
 
-.icdl-course{
+.icdl-course {
     background-image: url(home/ICDL-Course.png);
-    background-position: center center;
+    /* background-position: center center; */
     background-size: cover;
     object-fit: cover;
 }
 
-.image-of-course{
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
+.image-of-course {
+    /* border-top-right-radius: 10px;
+    border-top-left-radius: 10px; */
     width: 100%;
-    height: 140px;
-    background-color: #4016da;
+    height: 155px;
+    object-fit: cover;
 }
 
-.name-of-course{
+.name-of-course {
     font-size: 18px;
 }
 
-.description-of-course{
+.description-of-course {
     font-size: 12px;
     color: #555;
 }
 
-.footer{
+.footer {
     width: 100%;
     height: 400px;
     background-color: #4016da;
@@ -272,13 +275,13 @@ button{
     justify-content: space-around;
 }
 
-.bigger-text{
+.bigger-text {
     color: white;
     font-weight: 800;
     font-size: 27px;
 }
 
-.contact-information{
+.contact-information {
     color: white;
     display: flex;
     flex-direction: column;
@@ -287,11 +290,11 @@ button{
     width: 30%;
 }
 
-.location{
+.location {
     font-size: 14px;
 }
 
-.links{
+.links {
     width: 30%;
     display: flex;
     flex-direction: column;
@@ -299,11 +302,11 @@ button{
     align-items: flex-end;
 }
 
-.links > .link{
+.links>.link {
     color: white;
 }
 
-.name-of-website{
+.name-of-website {
     width: 30%;
     display: flex;
     flex-direction: column;
@@ -311,22 +314,24 @@ button{
     align-items: flex-end;
     color: white;
 }
+
 
 /* HOME STYLE END */
 
+
 /* LOGIN STYLES START */
 
-.text-margin{
+.text-margin {
     margin: 0 15px;
-    font-family: 'Cairo',sans-serif;
+    font-family: 'Cairo', sans-serif;
 }
 
-h1{
+h1 {
     text-align: center;
     color: #4016da;
 }
 
-.main-content{
+.main-content {
     width: 100%;
     height: 100%;
     display: flex;
@@ -336,7 +341,7 @@ h1{
     padding: 50px;
 }
 
-.login-form{
+.login-form {
     width: 100%;
     height: 50%;
     display: flex;
@@ -345,7 +350,7 @@ h1{
     align-items: center;
 }
 
-input{
+input {
     width: 80%;
     height: 40px;
     margin: 20px 0;
@@ -353,7 +358,7 @@ input{
     text-align: center;
 }
 
-#login-button{
+#login-button {
     background-color: #2cbbbd;
     color: white;
     border: 0;
@@ -363,15 +368,15 @@ input{
     border-radius: 3px;
 }
 
-input:focus{
+input:focus {
     outline: none;
 }
 
-input:active{
+input:active {
     outline: none;
 }
 
-.logo{
+.logo {
     width: 100%;
     height: 40%;
     display: flex;
@@ -379,7 +384,7 @@ input:active{
     justify-content: center;
 }
 
-.main-container{
+.main-container {
     background-color: white;
     width: 50%;
     height: 500px;
@@ -393,27 +398,30 @@ input:active{
     min-width: 400px;
 }
 
-.logo img{
+.logo img {
     width: 150px;
     height: 80%;
 }
+
+
 /* LOGIN STYLES END */
 
 
 /* SUGGEST STYLE START */
-.suggest-main-content{
+
+.suggest-main-content {
     padding: 20px;
 }
 
-input:focus{
-    outline:none
+input:focus {
+    outline: none
 }
 
-input:active{
+input:active {
     outline: none;
 }
 
-.suggest-form{
+.suggest-form {
     width: 100%;
     border: 1px solid #888;
     text-align: right;
@@ -423,14 +431,14 @@ input:active{
     border-radius: 10px;
 }
 
-.suggest-form .submit-btn{
+.suggest-form .submit-btn {
     width: 100px;
     margin: 10px auto;
     height: 40px;
     padding: 10px;
     background-color: #4016da;
     color: white;
-    font-family: 'Cario',sans-serif;
+    font-family: 'Cario', sans-serif;
     outline: none;
     border: none;
     font-size: 18px;
@@ -438,24 +446,26 @@ input:active{
     text-align: center;
 }
 
-.suggest-form input{
+.suggest-form input {
     text-align: right;
     height: 40px;
     font-size: 18px;
 }
 
+
 /* SUGGEST STYLE END */
 
 
 /* ARTICLES STYLE START */
-.news-container{
+
+.news-container {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: flex-start;
 }
 
-.news-box{
+.news-box {
     width: 23%;
     height: fit-content;
     display: flex;
@@ -466,47 +476,54 @@ input:active{
     margin: 10px;
 }
 
-.news-box .news-picture{
+.news-box .news-picture {
     width: 100%;
     height: 60%;
 }
 
-.news-box .news-picture img{
+.news-box .news-picture img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.news-context{
+.news-context {
     text-align: right;
     padding: 10px;
     font-weight: 800;
 }
 
-.news-description{
+.news-description {
     padding: 10px;
     text-align: right;
     color: #565656;
 }
+
+
 /* ARTICLES STYLE END */
 
+
 /* ABOUT US STYLE START */
-.about-us{
+
+.about-us {
     padding: 20px;
     text-align: right;
 }
+
+
 /* ABOUT US STYLE END */
+
 
 /* CONTACT STYLE START */
 
-.details-box{
+.details-box {
     width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-.detail{
+.detail {
     width: 30%;
     height: 300px;
     border: 1px solid #888;
@@ -520,7 +537,7 @@ input:active{
     color: #4016da;
 }
 
-.icon-box{
+.icon-box {
     font-size: 60px;
     border: 1px solid #444;
     width: 150px;
@@ -531,25 +548,28 @@ input:active{
     border-radius: 50%;
 }
 
-.icon-name{
+.icon-name {
     font-size: 24px;
 }
 
-.icon-text{
+.icon-text {
     font-size: 14px;
     color: black;
 }
+
+
 /* CONTACT STYLE END */
+
 
 /* COURSES STYLE START */
 
-.newest-courses{
-    background: linear-gradient(to bottom, #ede8ff ,white );
+.newest-courses {
+    background: linear-gradient(to bottom, #ede8ff, white);
     padding: 20px;
     padding-bottom: 80px;
 }
 
-.the-new-courses{
+.the-new-courses {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -557,7 +577,7 @@ input:active{
     width: 100%;
 }
 
-.course-box{
+.course-box {
     width: 20%;
     display: flex;
     flex-direction: column;
@@ -567,67 +587,31 @@ input:active{
     border-radius: 10px;
 }
 
-.web-design{
-    background-image: url(home/Web-Design-Course.png);
-    background-position: center center;
-    background-size: cover;
-    object-fit: cover;
-}
-
-.flutter-course{
-    background-image: url(home/Flutter-Course.jpg);
-    background-position: center center;
-    background-size: cover;
-    object-fit: cover;
-}
-
-.english-course{
-    background-image: url(home/English-Course.png);
-    background-position: center center;
-    background-size: cover;
-    object-fit: cover;
-}
-
-.icdl-course{
-    background-image: url(home/ICDL-Course.png);
-    background-position: center center;
-    background-size: cover;
-    object-fit: cover;
-}
-
-.image-of-course{
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-    width: 100%;
-    height: 140px;
-    background-color: #4016da;
-}
-
-.name-of-course{
+.name-of-course {
     font-size: 18px;
 }
 
-.description-of-course{
+.description-of-course {
     font-size: 12px;
     color: #555;
 }
 
-.suggestion-box{
+.suggestion-box {
     display: flex;
     width: 100%;
     align-items: center;
     justify-content: center;
 }
 
-.suggestion-btn{
+.suggestion-btn {
     background-color: #4016da;
     padding: 14px;
     border-radius: 14px;
-    
 }
 
-.suggestion-btn a{
+.suggestion-btn a {
     color: white;
 }
+
 
 /* COURSES STYLE END */

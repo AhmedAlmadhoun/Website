@@ -4,7 +4,7 @@
     <head>
         <title>جامعة الأزهر</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="{{ asset('siteasset/style.css') }}">
+        <link rel="stylesheet" href="{{ asset('siteasset/css/style.css') }}">
 
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrety="sha512-1PK0gIY59xJ8Co8+NE6FZ+L0AZKjKY8iq0G4B3CyeY6wYHN3yt9PW0XpScriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous">
@@ -36,21 +36,9 @@
                     </div>
                 </div>
                 <div class="nav-bar">
-                    @auth
-                        <div class="log-in">
-                            <a href="{{ route('login') }}"  class="link" onclick="event.preventDefault();
-                            document.getElementById('logout-form').submit();">
-                            تسجيل الخروج
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                @csrf
-                            </form>
-                        </a>
-                        </div>
-                        @else
-                        <div class="log-in">
-                            <a href="{{ route('login') }}"  class="link">تسجيل الدخول</a>
-                        </div>
-                    @endauth
+                    <div class="log-in">
+                        <a href="{{ route('login') }}"  class="link">تسجيل الدخول</a>
+                    </div>
                     <div class="call-us">
                         <a href="{{ route('contact') }}"  class="link">اتصل بنا</a>
                     </div>
@@ -70,7 +58,7 @@
                         <a href="http://www.alazhar.edu.ps/arabic/index.asp" class="link">صفحة الجامعة</a>
                     </div>
                     <div class="main-page">
-                        <a href="{{ route('home') }}" class="link active">الرئيسية</a>
+                        <a href="../home/home.html" class="link active">الرئيسية</a>
                     </div>
                 </div>
             </div>
@@ -112,7 +100,7 @@
                 </div>
             </div>
         </div>
-        <script src="{{ asset('siteasset/script.js') }}"></script>
+        <script src="{{ asset('siteasset/js/script.js') }}"></script>
         @yield('script')
     </body>
 </html>
