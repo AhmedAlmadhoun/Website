@@ -34,7 +34,7 @@
         <tr>
             <td>{{ $advertsing->id }}</td>
             <td>{{ $advertsing->title }}</td>
-            <td>{{ $advertsing->image }}</td>
+            <td><img src="{{ $advertsing->image }}" width="200px" alt=""></td>
             <td>{{ $advertsing->link }}</td>
             <td>{{ $advertsing->created_at ? $advertsing->created_at->diffForHumans() : '' }}</td>
             <td>

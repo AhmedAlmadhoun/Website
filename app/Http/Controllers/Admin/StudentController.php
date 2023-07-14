@@ -18,9 +18,19 @@ class StudentController extends Controller
      */
     public function index()
     {
-        $students = Student::orderBy('id', 'DESC')->paginate(10);
-        return view('admin.students..index', compact('students'));
-    }
+
+        if(request()->has('keyword')) {
+            // return request()->keyword;
+            $students = Student::where('name', 'like', '%'.request()->keyword.'%')->paginate(10);
+        }else {
+            $students = Student::orderBy('id', 'DESC')->paginate(10);
+
+            }
+            $female = Student::where('gender','Female')->count();
+            $male = Student::where('gender','Male')->count();
+            return view('admin.students.index', compact('students','female','male'));
+        }
+
 
     /**
      * Show the form for creating a new resource.
@@ -149,5 +159,6 @@ class StudentController extends Controller
         $student = Student::findOrFail($id);
         $student->delete();
         return redirect()->route('admin.students.index')->with('msg', 'Student deleted successfully')->with('type', 'danger');
-    }
+
+   }
 }

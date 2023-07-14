@@ -40,7 +40,10 @@ class CourseController extends Controller
      */
     public function store(Request $request)
     {
+
         //name	details	start_course	end_course	address	hours_count	days_count	time	coach_id
+
+        // @dd($request->all());
         $request->validate([
             'name' => 'required',
             'details' => 'required',

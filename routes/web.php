@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PDFController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Site\SiteController;
 use App\Http\Controllers\Admin\AdminConroller;
@@ -27,13 +28,9 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
 Route::prefix(LaravelLocalization::setLocale())->group(function(){
@@ -54,8 +51,11 @@ Route::prefix(LaravelLocalization::setLocale())->group(function(){
         Route::resource('advertsings', AdvertisingController::class);
         Route::get('users', [UserController::class, 'index'])->name('users.index');
         Route::delete('users/{id}', [UserController::class, 'destroy'])->name('users.destroy');
+        Route::get('message', [UserController::class, 'message'])->name('message.index');
+        Route::delete('message/{id}', [UserController::class, 'messagedestroy'])->name('message.destroy');
+        Route::get('subscripe', [UserController::class, 'subscripe'])->name('subscripe.index');
+        Route::delete('subscripe/{id}', [UserController::class, 'subscripeestroy'])->name('subscripe.destroy');
     });
-
 
     Auth::routes(['verify' => true]);
 
@@ -65,7 +65,10 @@ Route::prefix(LaravelLocalization::setLocale())->group(function(){
     Route::get('/contact', [SiteController::class, 'contact'])->name('contact');
     Route::get('/courses', [SiteController::class, 'courses'])->name('courses');
     Route::get('/suggest', [SiteController::class, 'suggest'])->name('suggest');
+    Route::post('/suggest', [SiteController::class, 'SuggestStore'])->name('SuggestStore');
+    Route::get('/show/{id}', [SiteController::class, 'show'])->name('show');
+    Route::post('/show/{id}', [SiteController::class, 'CoursesAdd'])->name('CoursesAdd');
 
-
+    Route::get('generate-pdf', [PDFController::class, 'generatePDF'])->name('generate-pdf');
 
 });

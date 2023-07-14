@@ -68,6 +68,8 @@
     </style>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <script src="https://cdn.tiny.cloud/1/pnaufl2tgt4jkehow3h3h90eqplgwxmytnkazqhemaadx6ns/tinymce/6/tinymce.min.js" referrerpolicy="origin">
+    </script>
     @yield('styles')
 </head>
 
@@ -113,34 +115,6 @@
                                 </a>
                             @endforeach
                             </div>
-
-                        {{-- @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-                            <li class="nav-item">
-                                <a class="nav-link" rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
-                                    {{-- {{ $localeCode }} --}}
-                                    {{-- @if ($localeCode == 'en')
-                                        <img width="30" src="{{ asset('adminassets/img/uk.png') }}" alt="">
-                                    @endif
-
-                                    @if ($localeCode == 'ar')
-                                        <img width="30" src="{{ asset('adminassets/img/ps.png') }}" alt="">
-                                    @endif --}}
-
-                                    {{-- @php
-                                        $flag = 'uk.png';
-                                    @endphp
-                                    @if ($localeCode == 'ar')
-                                        @php
-                                            $flag = 'ps.png';
-                                        @endphp
-                                    @endif
-
-                                    <img width="30" src="{{ asset('adminassets/img/'.$properties['flag']) }}" alt="">
-
-                                </a>
-                            </li>
-                        @endforeach --}}
-
                         <!-- Nav Item - Alerts -->
                         <li class="nav-item dropdown no-arrow mx-1">
                             <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
@@ -280,6 +254,12 @@
     <!-- Custom scripts for all pages-->
     <script src="{{ asset('adminassets/js/sb-admin-2.min.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <!-- Page level plugins -->
+    <script src="{{ asset('adminassets/vendor/chart.js/Chart.min.js') }}"></script>
+
+    <!-- Page level custom scripts -->
+    {{-- <script src="{{ asset('adminassets/js/demo/chart-area-demo.js') }}"></script> --}}
+    {{-- <script src="{{ asset('adminassets/js/demo/chart-pie-demo.js') }}"></script> --}}
     <script>
         var userId = '{{ Auth::id() }}'
     </script>

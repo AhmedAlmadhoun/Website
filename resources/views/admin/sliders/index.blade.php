@@ -34,7 +34,7 @@
         <tr>
             <td>{{ $slider->id }}</td>
             <td>{{ $slider->title }}</td>
-            <td>{{ $slider->image }}</td>
+            <td><img src="{{ $slider->image }}" width="200px" alt=""></td>
             <td>{{ $slider->link }}</td>
             <td>{{ $slider->created_at ? $slider->created_at->diffForHumans() : '' }}</td>
             <td>

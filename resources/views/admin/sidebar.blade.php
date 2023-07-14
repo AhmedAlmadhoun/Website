@@ -178,7 +178,23 @@
             <i class="fas fa-fw fa-users"></i>
             <span>{{ __('site.users') }}</span></a>
     </li>
+    <!-- Divider -->
+    <!-- Divider -->
+    <hr class="sidebar-divider my-0">
 
+    <li class="nav-item {{ request()->routeIs('admin.subscripe.index') ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('admin.subscripe.index') }}">
+            <i class="fas fa-fw fa-users"></i>
+            <span>{{ __('site.subscripe') }}</span></a>
+    </li>
+    <!-- Divider -->
+    <hr class="sidebar-divider my-0">
+
+    <li class="nav-item {{ request()->routeIs('admin.message.index') ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('admin.message.index') }}">
+            <i class="fas fa-fw fa-pen"></i>
+            <span>{{ __('site.notes') }}</span></a>
+    </li>
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">
 

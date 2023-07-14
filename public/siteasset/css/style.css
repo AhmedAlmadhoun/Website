@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -128,15 +130,6 @@ button {
     color: white;
     padding: 12px;
     cursor: pointer;
-}
-
-.top-news-picture {
-    width: 30%;
-    height: 100%;
-    background-image: url(home/medical-student.jpg);
-    background-size: cover;
-    object-fit: cover;
-    background-position: center center;
 }
 
 .news-context {

@@ -18,10 +18,10 @@
     <label for="gender">{{ __('site.gender') }}</label>
     <select name="gender" id="gender" class="form-control">
         <option value="">Select Gender</option>
-        <option {{ $student->gender == 'Male'   ? 'selected' : '' }}>{{ __('site.male') }}</option>
-        <option {{ $student->gender == 'Female' ? 'selected' : '' }}>{{ __('site.female') }}</option>
-    </select>
 
+        <option value="Male" {{ $student->gender == 'Male'   ? 'selected' : '' }} >{{ __('site.male') }}</option>
+        <option  value="Female"  {{ $student->gender == 'Female' ? 'selected' : '' }}>{{ __('site.female') }}</option>
+    </select>
 </div>
 <div class="form-group">
     <label for="address">{{ __('site.address') }}</label>
@@ -55,8 +55,6 @@
     <select name="coach_id" id="coach_id" class="form-control">
         <option value="">Select Coach</option>
         @foreach ($coaches as $coach)
-        {{-- <option {{ $course->coach_id == $coach->id ? 'selected' : ''  }} value="{{ $coach->id }}">{{ $coach->name }}</option> --}}
-
             <option {{ $student->coach_id == $coach->id ? 'selected' : ''  }}   value="{{ $coach->id }}">{{ $coach->name }}</option>
         @endforeach
     </select>

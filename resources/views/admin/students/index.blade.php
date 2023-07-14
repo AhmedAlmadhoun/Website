@@ -17,6 +17,13 @@
     </div>
 @endif
 
+<form action="{{ route('admin.students.index') }}" method="get">
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Search..." value="{{ request()->keyword }}" name="keyword">
+        <button class="btn btn-success" type="submit" id="button-addon2">Search</button>
+      </div>
+</form>
+
 <table class="table table-bordered">
     <thead>
         <tr>

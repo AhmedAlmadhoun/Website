@@ -22,8 +22,8 @@
     <label for="gender">{{ __('site.gender') }}</label>
     <select name="gender" id="gender" class="form-control">
         <option value="">Select Gender</option>
-        <option {{ $coach->gender == 'Male'   ? 'selected' : '' }}>{{ __('site.male') }}</option>
-        <option {{ $coach->gender == 'Female' ? 'selected' : '' }}>{{ __('site.female') }}</option>
+        <option value="Male" {{ $coach->gender == 'Male'   ? 'selected' : '' }} >{{ __('site.male') }}</option>
+        <option  value="Female"  {{ $coach->gender == 'Female' ? 'selected' : '' }}>{{ __('site.female') }}</option>
     </select>
 
 </div>
@@ -40,8 +40,8 @@
     <label for="gender">{{ __('site.status') }}</label>
     <select name="status" id="status" class="form-control">
         <option value="">Select Status</opticourseson>
-        <option  {{ $coach->status == 'Active'   ? 'selected' : '' }}>{{ __('site.active') }}</option>
-        <option  {{ $coach->status == 'Active'   ? 'Inactive' : '' }} >{{ __('site.inactive') }}</option>
+        <option value="Active"   {{ $coach->status == 'Active'   ? 'selected' : '' }}>{{ __('site.active') }}</option>
+        <option value="Inactive"  {{ $coach->status == 'Active'   ? 'Inactive' : '' }} >{{ __('site.inactive') }}</option>
     </select>
 
 </div>

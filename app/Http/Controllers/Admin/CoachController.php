@@ -39,7 +39,7 @@ class CoachController extends Controller
     public function store(Request $request)
     {
         //name	id_number	phone	email	gender	address	notes	status
-
+        // @dd($request->all());
         $request->validate([
             'name' => 'required',
             'id_number' => 'required',

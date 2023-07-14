@@ -20,8 +20,7 @@
 
 
 @section('scripts')
-<script src="https://cdn.tiny.cloud/1/pnaufl2tgt4jkehow3h3h90eqplgwxmytnkazqhemaadx6ns/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
-<script>
+<script src="https://cdn.tiny.cloud/1/pnaufl2tgt4jkehow3h3h90eqplgwxmytnkazqhemaadx6ns/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script><script>
     tinymce.init({
         selector: '.tinyedit',
         height: '400px'

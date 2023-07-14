@@ -38,6 +38,7 @@
     border: none;
     outline: none;
     background: transparent;
+    /* margin-left: -4%; */
 }
 
 .slick-prev:hover,
@@ -67,13 +68,15 @@
     font-size: 20px;
     line-height: 1;
     opacity: .75;
-    color: black;
+    color: white;
+    display: none;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
 .slick-prev {
     left: -25px;
+    margin-left: -4%;
 }
 
 [dir='rtl'] .slick-prev {
@@ -90,7 +93,8 @@
 }
 
 .slick-next {
-    right: -25px;
+    right: 15px;
+    margin-right: -3%;
 }
 
 [dir='rtl'] .slick-next {
